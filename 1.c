@@ -4,9 +4,9 @@ int main(){
 	using namespace std;
 	int srok;
 	double summ;
-	cout<<"Введите срок";
+	cout<<"Введите срок, в месяцах";
 	cin>>srok;
-	cout<<"Введите сумму";
+	cout<<"Введите сумму: ";
 	cin>>summ;
 	if(summ<0&&srok<0) {
 		cout<<"Некорректная сумма/дата";
