@@ -1,2 +1,3 @@
-programma: 1.c 
-	gcc -Wall -o vkladimake 1.c
+make: 
+	gcc -Wall -Werror -o deposit.o main.o deposit.exe
+	mkdir deposit.exe /bin/

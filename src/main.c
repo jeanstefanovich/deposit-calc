@@ -1,10 +1,18 @@
 #include <stdio>
-
+#include <oistream>
+#include "deposit.h"
 int main(){
-	cout<<"Введите срок, в месяцах";
+	int srok;
+	double summ;
+	cout<<"\nВведите срок, в месяцах";
 	cin>>srok;
-	cout<<"Введите сумму: ";
+	cout<<"\nВведите сумму: ";
 	cin>>summ;
-	
-        return 0;
+	if(error(srok,summ)>(-1)){
+		cout<<"\nСумма на конец "<<deposit(srok,summ);
+	}
+	else{
+	cout<<"\nНекорректная сумма/дата";
+	}
+    return 0;
 }
