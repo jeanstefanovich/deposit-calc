@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-#include <stdio>
-=======
 #include <cstdio>
->>>>>>> Made working make
-
+#include "deposit.h"
 int deposit(int srok, double  summ){
 	using namespace std;
 	if(srok<=30) return(summ*0.9);
