@@ -2,8 +2,6 @@
 #include "deposit.h"
 int deposit(int srok, double  summ){
 	using namespace std;
-	if((srok<0)||(srok>365)) return -1;
-	if(summ<10000) return -1;
 	if(srok<=30) return(summ*0.9);
 	if(srok>=31&&srok<=120&&summ<=100000) return(summ*1.02);
 	if(srok>=31&&srok<=120&&summ>=100000) return(summ*1.03);
@@ -17,7 +15,7 @@ int deposit(int srok, double  summ){
 int error(int srok, double  summ){
 	using namespace std;
 	int srok;
-	if(summ<10000&&srok<0) {
+	if(summ < 10000 && srok<0 && srok>365) {
 		return -1;
 	}
 	return 0;
