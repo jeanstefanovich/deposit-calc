@@ -2,17 +2,20 @@
 
 all:deposit-calc
 
-deposit-calc: deposit.o main.o 
+deposit-calc: src/deposit.o src/main.o 
 	mkdir -p bin
 	g++ -Wall -Werror -o bin/deposit.exe build/deposit.o build/main.o
 
-deposit.o:
+build/src/deposit.o:
 	mkdir -p build
-	g++ -Wall -Werror -c -o build/deposit.o src/deposit.c
+	g++ -Wall -Werror -c -o build/src/deposit.o src/deposit.c
 
-main.o:
+build/src/main.o:
 	mkdir -p build
-	g++ -Wall -Werror -c -o build/main.o src/main.c
+	g++ -Wall -Werror -c -o build/src/main.o src/main.c
 
 clean:
 	rm -rf bin/ build/
+
+validtest: deposit_test.o /main.o
+	
