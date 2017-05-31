@@ -1,4 +1,4 @@
-#include <ctest.h>
+#include "ctest.h"
 #include "deposit.h"
 
 CTEST(Validation_test, srok_0_OK_sum_0_FAIL)

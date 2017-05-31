@@ -1,20 +1,18 @@
-#include <cstdio>
-#include <iostream>
 #include "deposit.h"
+#include <stdio.h>
 
 int main(){
-	using namespace std;
 	int srok;
 	double summ;
-	cout<<"\nВведите срок, в месяцах"<<endl;
-	cin>>srok;
-	cout<<"\nВведите сумму: "<<endl;
-	cin>>summ;
+	printf("Введите количество дней: ");
+	scanf("%d", &srok);
+	printf("Введите сумму вклада: ");
+	scanf("%d", &summ);
 	if(error(srok,summ)>(-1)){
-		cout<<"\nСумма на конец "<<deposit(srok,summ)<<endl;
+		printf("\nСумма на конец: ",deposit(srok,summ));
 	}
 	else{
-	cout<<"\nНекорректная сумма/дата"<<endl;
+	printf("\nНекорректная сумма/дата");
 	}
     return 0;
 }
