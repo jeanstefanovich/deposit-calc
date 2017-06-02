@@ -7,9 +7,9 @@ int main(){
 	printf("Введите количество дней: ");
 	scanf("%d", &srok);
 	printf("Введите сумму вклада: ");
-	scanf("%d", &summ);
+	scanf("%lf", &summ);
 	if(error(srok,summ)>(-1)){
-		printf("\nСумма на конец: ",deposit(srok,summ));
+		printf("\nСумма на конец: %d",deposit(srok,summ));
 	}
 	else{
 	printf("\nНекорректная сумма/дата");
