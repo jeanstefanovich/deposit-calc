@@ -57,9 +57,9 @@ CTEST(Deposit_test, srok_365_OK_sum_1000000_OK_expections_OK)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(Deposit_test, srok_365_OK_sum_100000_OK_expections_FAIL)
+CTEST(Deposit_test, srok_365_OK_sum_100000_OK_expections_OK)
 {
     const int result = deposit(365,100000);
-    const int expected = 1150000;
+    const int expected = 1120000;
     ASSERT_EQUAL(expected, result);
 }

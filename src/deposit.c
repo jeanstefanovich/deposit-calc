@@ -11,7 +11,7 @@ int deposit(int srok, double  summ){
 }
 
 int error(int srok, double  summ){
-	if(summ < 10000 && srok<0 && srok>365) {
+	if(summ < 10000 || srok<0 || srok>365) {
 		return -1;
 	}
 	return 0;
