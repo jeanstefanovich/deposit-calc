@@ -1,7 +1,7 @@
 .PHONY: all clean make deposit_test
 CC = gcc
 
-all: deposit-calc
+all: deposit-calc deposit_test
 
 deposit-calc: build/src/deposit.o build/src/main.o 
 	mkdir -p bin
